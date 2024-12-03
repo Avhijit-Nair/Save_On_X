@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Tweet Summarizer",
+    "version": "1.0",
+    "description": "Summarize selected text to fit Twitter's character limit",
+    "permissions": [
+      "contextMenus",
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
